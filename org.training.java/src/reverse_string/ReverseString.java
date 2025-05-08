@@ -13,5 +13,16 @@ public class ReverseString {
         }
 
         System.out.println(reverseString);
+
+        // use chars array
+        char[] charArr = string.toCharArray();
+
+        for (int i = charArr.length - 1; i >= 0; i--) {
+            reverseString = reverseString + charArr[i];
+        }
+
+        // use stringBuffer
+        StringBuffer stringBuffer = new StringBuffer(string);
+        stringBuffer.reverse();
     }
 }
