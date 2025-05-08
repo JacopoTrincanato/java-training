@@ -24,5 +24,13 @@ public class SwapNumbers {
         numberOne = numberOne * numberTwo; // 10*20=200
         numberTwo = numberOne / numberTwo; // 200/20=10
         numberOne = numberOne / numberTwo; // 200/10=20
+
+        // swap numbers using bitwise operator
+        numberOne = numberOne ^ numberTwo;
+        numberTwo = numberOne ^ numberTwo;
+        numberOne = numberOne ^ numberTwo;
+
+        // single statement
+        numberTwo = numberOne + numberTwo - (numberOne = numberTwo);
     }
 }
