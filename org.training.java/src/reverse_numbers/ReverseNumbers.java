@@ -16,5 +16,19 @@ public class ReverseNumbers {
         }
 
         System.out.println("Reverse number is... " + reverseNumber);
+
+        // using StringBuff class
+        StringBuffer stringBuffer = new StringBuffer(String.valueOf(userNumber));
+        StringBuffer reverse = stringBuffer.reverse();
+
+        System.out.println("Reverse number is... " + reverse);
+
+        // use StringBuilder method
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(userNumber);
+        stringBuilder.reverse();
+
+        System.out.println("Reverse number is... " + reverseNumber);
+        scanner.close();
     }
 }
