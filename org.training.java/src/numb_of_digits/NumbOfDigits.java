@@ -1,6 +1,6 @@
 package numb_of_digits;
 
-public class NombOfDigits {
+public class NumbOfDigits {
     public static void main(String[] args) {
         int num = 123456;
         int count = 0;
