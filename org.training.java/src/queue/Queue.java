@@ -8,15 +8,23 @@ public class Queue {
 
     public void enQueue(int data) {
         this.queue[this.rear] = data;
-        this.rear += 1;
+        this.rear += 1 % 5;
         this.size += 1;
     }
 
     public void show() {
         System.out.println("Elements: ");
         for (int i = 0; i < size; i++) {
-            System.out.println(this.queue[i] + " ");
+            System.out.println(this.queue[(this.front + i) % 5] + " ");
         }
+        System.out.println();
+    }
+
+    public int deQueue() {
+        int data = this.queue[this.front];
+        this.front += 1 % 5;
+        this.size -= 1;
+        return data;
     }
 
     public int[] getQueue() {
