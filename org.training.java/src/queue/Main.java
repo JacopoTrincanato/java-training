@@ -9,6 +9,8 @@ public class Main {
         queue.enQueue(3);
         queue.deQueue();
         queue.show();
+
+        System.out.println(queue.getSize());
     }
 
 }

@@ -7,9 +7,13 @@ public class Queue {
     private int rear;
 
     public void enQueue(int data) {
-        this.queue[this.rear] = data;
-        this.rear += 1 % 5;
-        this.size += 1;
+        if (!isFull()) {
+            this.queue[this.rear] = data;
+            this.rear += 1 % 5;
+            this.size += 1;
+        } else {
+            System.out.println("Queue is full");
+        }
     }
 
     public void show() {
@@ -18,13 +22,30 @@ public class Queue {
             System.out.println(this.queue[(this.front + i) % 5] + " ");
         }
         System.out.println();
+
+        for (int n : this.queue) {
+            System.out.println(n + " ");
+        }
     }
 
     public int deQueue() {
         int data = this.queue[this.front];
-        this.front += 1 % 5;
-        this.size -= 1;
+        if (!isEmpty()) {
+            this.front += 1 % 5;
+            this.size -= 1;
+        } else {
+            System.out.println("Queue is empty");
+        }
+
         return data;
+    }
+
+    public boolean isEmpty() {
+        return this.size == 0;
+    }
+
+    public boolean isFull() {
+        return this.size == 5;
     }
 
     public int[] getQueue() {
