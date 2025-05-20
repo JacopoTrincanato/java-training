@@ -78,6 +78,33 @@ public class PrintPatterns {
             System.out.println();
         }
 
+        // diamond pattern
+        for (int i = 1; i <= number - 1; i++) {
+
+            for (int k = 1; k <= number - i; k++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= i * 2 - 1; j++) {
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+
+        for (int i = number; i >= 1; i--) {
+
+            for (int k = number - i; k >= 1; k--) {
+                System.out.print(" ");
+            }
+
+            for (int j = i * 2 - 1; j >= 1; j--) {
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+
         scanner.close();
     }
 }
