@@ -2,7 +2,7 @@ package count_vowels;
 
 public class CountVowels {
     public static void main(String[] args) {
-        countVowels("Hello World");
+        countVowels("aeiou");
     }
 
     public static void countVowels(String word) {
