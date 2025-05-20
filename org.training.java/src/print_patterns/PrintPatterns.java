@@ -27,6 +27,29 @@ public class PrintPatterns {
             System.out.println();
         }
 
+        // left side triangle pattern
+        for (int i = 1; i <= number; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+
+        // right side triangle pattern
+        for (int i = 1; i <= number; i++) {
+
+            for (int k = 1; k <= number - i; k++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+
         scanner.close();
     }
 }
