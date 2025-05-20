@@ -19,9 +19,11 @@ public class Anagrams {
         // Array per contare i caratteri della stringa 'two'
         int[] charCount = new int[26];
         for (char c : two.toCharArray()) {
+            // Sottraggo dal carattere corrente la a in valore ASCII
             charCount[c - 'a']++;
         }
 
+        // count è la lunghezza della stringa che stiamo cercando in one
         int left = 0, right = 0, count = two.length();
 
         while (right < one.length()) {
