@@ -16,13 +16,12 @@ public class Node {
         return this.next;
     }
 
-    public void setNext(Node node) {
-        this.next = node;
+    public void setNext(Node next) {
+        this.next = next;
     }
 
     @Override
     public String toString() {
         return String.format("%s", this.element);
     }
-
 }

@@ -62,11 +62,13 @@ public class Linkedlist {
                 newNode = newNode.getNext();
             }
 
-            Node nodeToDelete = newNode.getNext();
-            int deletedElement = nodeToDelete.getElement();
-            newNode.setNext(nodeToDelete.getNext());
-            System.out.println("deleted element " + deletedElement);
+            Node toDelete = newNode.getNext();
+            int deletedElement = toDelete.getElement();
+            newNode.setNext(toDelete.getNext());
+
+            System.out.println("deleted element: " + deletedElement);
         }
+
     }
 
     @Override
@@ -77,6 +79,7 @@ public class Linkedlist {
             stringBuilder.append(current.getElement()).append("->");
             current = current.getNext();
         }
+
         return stringBuilder.toString();
     }
 
